@@ -23,6 +23,10 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
+      # 👇 ВОТ ЭТОТ ШАГ: он покажет нам список файлов
+      - name: Check files
+        run: ls -la
+
       - name: Build Debug APK
         run: gradle assembleDebug
 
